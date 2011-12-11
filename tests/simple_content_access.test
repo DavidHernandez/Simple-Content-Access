@@ -68,9 +68,14 @@ class SimpleContentAccessTestCase extends DrupalWebTestCase {
   }
 
   // Create a simpletest_example node using thec node form
-  public function testSimpleContentAccessCheckPermisions() {
+  public function testPermisions() {
       $permissions = simple_content_access_permission();
       debug(array_keys($permissions));
       $this->assertTrue(key_exists('view user content', $permissions));
+  }
+  
+  // Create a simpletest_example node using thec node form
+  public function testMenuAlter() {
+      
   }
 }
