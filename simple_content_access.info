@@ -1,1 +1,5 @@
-; Hola barbacoders! :-) 
+name = Simple content access
+description = Adds a view permission for each content type
+package = Access control
+version = 7.x-1.0
+core = 7.x
