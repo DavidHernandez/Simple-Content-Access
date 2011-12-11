@@ -23,6 +23,17 @@ function simple_content_access_menu_alter(&$items) {
  * Implements hook_permission().
  */
 function simple_content_access_permission() {
-  return array();
+  $permissions = array();
+  
+  foreach (entity_get_info() as $entity) {
+    foreach($entity['bundles'] as $bundle_name => $bundle_info) {
+      $permissions["view $bundle_name content"] = array(
+        'title' => "View $bundle_name content",
+        'description' => "Allow user to view $bundle_name content",
+      );
+    }
+  }
+  
+  return $permissions;
 }
 
