@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * This module adds "view" permission to bundles.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function simple_content_access_help($path, $arg) {
+  
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function simple_content_access_menu_alter(&$items) {
+  
+}
+
+/**
+ * Implements hook_permission().
+ */
+function simple_content_access_permission() {
+  return array();
+}
+
